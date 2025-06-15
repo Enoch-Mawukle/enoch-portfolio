@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rainfall Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+  <meta name="description" content="Interactive Rainfall Analysis Dashboard built with Power BI and Python.">
+</head>
+<body id="top" class="light-mode">
+  <!-- Back to Portfolio (Top) -->
+  <div class="back-to-home-top">
+    <a href="../index.html">&laquo; Back to Portfolio</a>
+  </div>
+
+  <header class="project-header">
+    <h1>🌧️ Rainfall Data Insights & Visualization</h1>
+    <p>Leveraged Excel, SQL, and Python (Pandas, Matplotlib) to analyze rainfall patterns and their effects on agriculture and water resources...</p>
+  </header>
+
+  <main>
+    <!-- Embedded Power BI Dashboard -->
+    <section class="dashboard-section">
+      <div class="container">
+        <div class="dashboard-container">
+          <iframe 
+            title="Rainfall Analysis Dashboard"
+            src="https://app.powerbi.com/view?r=eyJrIjoiZGJiYWFiNTgtNjlhOS00OTZiLWJmMTctZTFhNThlNThjZjQ2IiwidCI6IjMzOTg3ZDNhLWY3ZmYtNGQ2Ny1iMDA0LThmYWM3YjNjZGRiZCJ9"
+            frameborder="0"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Portfolio (Bottom) -->
+  <div class="back-to-home">
+    <div class="container">
+      <a href="../index.html">&laquo; Back to Portfolio</a>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#top" id="back-to-top" aria-label="Back to top">↑ Back to Top</a>    
+
+  <!-- External Scripts -->
+  <script src="https://unpkg.com/aos@2.next/dist/aos.js"></script> 
+  <script>
+    // Back to top button
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rainfall Dashboard</title>
+  <link rel="stylesheet" href="../style.css" />
+  <meta name="description" content="Interactive Rainfall Analysis Dashboard built with Power BI and Python.">
+</head>
+<body id="top" class="light-mode">
+  <!-- Back to Portfolio (Top) -->
+  <div class="back-to-home-top">
+    <a href="../index.html">&laquo; Back to Portfolio</a>
+  </div>
+
+  <header class="project-header">
+    <h1>🌧️ Rainfall Data Insights & Visualization</h1>
+    <p>Leveraged Excel, SQL, and Python (Pandas, Matplotlib) to analyze rainfall patterns and their effects on agriculture and water resources...</p>
+  </header>
+
+  <main>
+    <!-- Embedded Power BI Dashboard -->
+    <section class="dashboard-section">
+      <div class="dashboard-container">
+        <iframe 
+          title="Rainfall Analysis Dashboard"
+          src="https://app.powerbi.com/view?r=eyJrIjoiZGJiYWFiNTgtNjlhOS00OTZiLWJmMTctZTFhNThlNThjZjQ2IiwidCI6IjMzOTg3ZDNhLWY3ZmYtNGQ2Ny1iMDA0LThmYWM3YjNjZGRiZCJ9"
+          frameborder="0"
+          allowfullscreen="true">
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Portfolio (Bottom) -->
+  <div class="back-to-home">
+    <a href="../index.html">&laquo; Back to Portfolio</a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <a href="#top" id="back-to-top" aria-label="Back to top">↑ Back to Top</a> 
+
+  <script>
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('show');
+      } else {
+        backToTop.classList.remove('show');
+      }
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem 1rem;
+    }
+
+    .project-header {
+      text-align: center;
+      background-color: var(--accent-blue);
+      color: var(--text-light);
+      padding: 2rem 1rem;
+    }
+
+    .dashboard-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin: 2rem auto;
+    }
+
+    .dashboard-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .back-to-home,
+    .back-to-home-top {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .back-to-home a,
+    .back-to-home-top a {
+      display: inline-block;
+      color: var(--accent-blue);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .back-to-home a:hover,
+    .back-to-home-top a:hover {
+      color: var(--primary-yellow);
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: var(--accent-blue);
+      color: var(--text-light);
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #back-to-top:hover {
+      background-color: #187bcd;
+      transform: translateY(-3px);
+    }
+
+    #back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</body>
+</html>
